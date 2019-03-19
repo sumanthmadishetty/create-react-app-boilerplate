@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ArtistCard } from './card';
 
 class App extends Component {
+
+constructor(props) {
+  super(props)
+  this.state = {
+    rate: ''
+  }
+}
+
+  handleChangeRate = (state) => {
+    debugger
+    this.setState({rate: state})
+  }
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,7 +34,9 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+
+        </header> */}
+        <ArtistCard artist={'artist'} key={'index'} rating={this.state.rate} deleteArtist={this.deleteArtist} onChangeRating={this.handleChangeRate}  />
       </div>
     );
   }
