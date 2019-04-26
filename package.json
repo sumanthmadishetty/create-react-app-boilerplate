@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-i18next": "^10.8.1",
     "react-scripts": "2.1.8",
+    "i18next": "15.0.9",
     "react-stars": "^2.2.5"
   },
   "scripts": {
